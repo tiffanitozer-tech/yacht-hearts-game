@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yacht Hearts Visual Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Season 1 · Love Overboard</div>
+        <h1>Yacht Hearts</h1>
+      </div>
+      <button class="icon-btn" onclick="openPhone()">📱</button>
+    </header>
+
+    <main id="app"></main>
+
+    <nav class="bottom-nav">
+      <button onclick="go('home')">🏠<span>Home</span></button>
+      <button onclick="go('creator')">💄<span>Look</span></button>
+      <button onclick="go('closet')">👗<span>Closet</span></button>
+      <button onclick="go('episode')">🎬<span>Episode</span></button>
+      <button onclick="go('cast')">❤️<span>Cast</span></button>
+    </nav>
+  </div>
+
+  <div id="phoneOverlay" class="phone-overlay hidden">
+    <div class="phone-card">
+      <div class="phone-header">
+        <div>
+          <div class="eyebrow dark">In-Game Phone</div>
+          <h2>Messages</h2>
+        </div>
+        <button class="close-btn" onclick="closePhone()">×</button>
+      </div>
+      <div id="messagesList"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
